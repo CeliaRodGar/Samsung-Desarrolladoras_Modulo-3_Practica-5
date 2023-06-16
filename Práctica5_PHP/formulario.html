@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario de Registro SCIII</title>
+<link href="style.css" rel="stylesheet" type= "text/css">
+</head>
+
+<body>
+    <div class="form">
+        <form method="POST" action="Formulario.php" class="formulario" id="formulario">
+            <div class="title">Formulario de registro</div>
+            <div class="subtitle">Por favor, introduzca sus datos personales.</div>
+
+            <!-- Grupo Nombre -->
+            <div class="input-container cont1">
+                <input type="text" id="nombre" name="nombre" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" class="form-input" placeholder=" " required title="El nombre sólo puede contener letras"/>
+                <div class="cut"></div>    
+                <label for="nombre" class="placeholder">Nombre<span><em>(requerido)</em></span></label>
+            </div>
+
+            <!-- Grupo Apellido -->
+            <div class="input-container cont2"> 
+                <input type="text" id="apellido" name="apellido" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" class="form-input" placeholder=" " required title="El apellido sólo puede contener letras"/>
+                <div class="cut"></div>
+                <label for="apellido" class="placeholder">Apellido<span><em>(requerido)</em></span></label>
+            </div>
+
+            <!-- Grupo Email -->
+            <div class="input-container cont2"> 
+                <input type="email" id="email" name="email" pattern="/^[a-zA-Z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&\'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/" class="form-input" placeholder=" " required title="Por favor, introduce una dirección de correo electrónico válida."/>
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Email<span><em>(requerido)</em></span></label>
+            </div>   
+
+            <!-- Botón Submit -->
+                <input class="form-btn" name="submit" type="submit" value="Suscribirse" />
+            <?php include 'Formulario.php'; ?>
+        </form>
+    </div>
+</body>
+</html>
